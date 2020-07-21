@@ -36,6 +36,4 @@ export class Artwork extends Component {
         )
     }
 }
-
 export default Artwork
-/*/<a href="{Pinkboxes}" class="animsition-link">Pink Boxes</a> */

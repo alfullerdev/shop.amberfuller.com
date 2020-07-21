@@ -13,11 +13,11 @@ export class Header extends Component {
 				<div className="header-container">
 					<div className="container clearfix">
 						<div class="text-center">
-							<img src={Logo} style={{width:"18%"}} ></img>
+							<img src={Logo} style={{width:"18%"}} alt="logo" ></img>
 						</div>
 						<div class="pull-right">
 
-							<a className="fullscreen-menu-toggle">
+							<a className="fullscreen-menu-toggle" href="index.html">
 								<span>Menu</span>
 								<i className="menu-bars">
 									<i></i>
