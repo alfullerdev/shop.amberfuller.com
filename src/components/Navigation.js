@@ -17,12 +17,6 @@ export default function Navigation(props) {
     function showArt(){
         props.showArt()
     }
-
-    function getClass(){
-        //<button onClick={props.showCheck} className={getClass()}>checkout({props.count})</button>
-        return 
-    }
-
     function checkoutButton(){
 
         let css = "ui button noStyle"
@@ -41,14 +35,14 @@ export default function Navigation(props) {
                 </Menu.Item>
             <Menu.Item>
             <Grid stackable>
-                <Grid.Row columns={4}>
-                    <Grid.Column >
+                <Grid.Row  columns={3}>
+                    <Grid.Column id="aboutSubav" className="subNav">
                         <button onClick={props.showAboutFn} className="ui button noStyle">about</button>
                     </Grid.Column>
-                    <Grid.Column>
+                    <Grid.Column id="ctcSubav" className="subNav">
                         <button onClick={props.showContactFn} className="ui button noStyle">contact</button>
                     </Grid.Column>
-                    <Grid.Column>
+                    <Grid.Column id="chkSubav" className="subNav">
                         {checkoutButton()}
                     </Grid.Column>
                     <Grid.Column>

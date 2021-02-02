@@ -27,7 +27,6 @@ import Pinkboxes from "./assets/artwork/pinkboxes.png"
 import Hat from "./assets/artwork/hat.png"
 import BlackPrint from "./assets/artwork/blackprint.png"
 
-
 export const ArtList = React.createContext();
 
 export default function App() {
@@ -68,24 +67,6 @@ export default function App() {
 
   }, [total, cart, count])
 
-  function checkOutShow (){
-    setCheckout(true);
-    setArt(false);
-    setReturn(false);
-    setPrivacy(false);
-    setAbout(false);
-    setContact(false);
-  }
-
-  function showArtToggle(){
-    setCheckout(false);
-    setArt(true);
-    setReturn(false);
-    setPrivacy(false);
-    setAbout(false);
-    setContact(false);
-  }
-
   function clearCart(){
     setCart('')
     setCount(0)
@@ -121,12 +102,9 @@ export default function App() {
         nextCart[cartIndex].quantity = nextCart[cartIndex].quantity-1
       }
 
-
-
       setCart(nextCart);
       setCount(count-1);
       setTotal(total-Number(piece.price));
-
   }
 }
 
@@ -147,6 +125,9 @@ function formatArtforEmail() {
 
 
 function completedPurchase(data){
+  
+  setCheckout(false)
+  setConformation(true)
 
   let emailData = {
       purchased_art:formatArtforEmail(),
@@ -166,8 +147,7 @@ function completedPurchase(data){
 
 function sendSampleEmail (order) {
       
-      setCheckout(false)
-      setConformation(true)
+
       
       const today = new Date();
 
@@ -225,6 +205,8 @@ function updatePiece (piece) {
     setReturn(false);
     setAbout(false)
     setContact(false)
+    setConformation(false);
+    setCheckout(false);
   }
 
   function showFooterRet() {
@@ -234,7 +216,8 @@ function updatePiece (piece) {
     setArt(false);
     setAbout(false)
     setContact(false)
-
+    setConformation(false);
+    setCheckout(false);
   }
 
   function showContactFn() {
@@ -244,6 +227,8 @@ function updatePiece (piece) {
     setArt(false);
     setAbout(false)
     setContact(true)
+    setConformation(false);
+    setCheckout(false);
 
   }
 
@@ -253,8 +238,30 @@ function updatePiece (piece) {
     setReturn(false);
     setPrivacy(false);
     setArt(false);
-    setAbout(true)
+    setAbout(true);
+    setConformation(false);
+    setCheckout(false);
+  }
 
+  function checkOutShow (){
+    window.scrollTo(0, 0)
+    setCheckout(true);
+    setArt(false);
+    setReturn(false);
+    setPrivacy(false);
+    setAbout(false);
+    setContact(false);
+    setConformation(false);
+  }
+
+  function showArtToggle(){
+    setCheckout(false);
+    setArt(true);
+    setReturn(false);
+    setPrivacy(false);
+    setAbout(false);
+    setContact(false);
+    setConformation(false)
   }
 
   return (

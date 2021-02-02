@@ -14,9 +14,6 @@ export class Checkout extends Component {
 
     constructor(props) {
         super(props);
-        
-
-        console.log(props)
 
         this.state = {
             showPaypal: true,
@@ -41,41 +38,36 @@ export class Checkout extends Component {
 
         const selectedArt = this.props.cart//JSON.parse(localStorage.getItem('cart'));
 
-        let shoppingCart  = <p className="nocart">NOTHING IN CART</p>
+        let shoppingCart  = <div><p className="nocart">NOTHING IN CART</p></div>
 
         if(selectedArt) {
-            console.log('artwork',selectedArt);
             shoppingCart = selectedArt.map((piece, index) =>
-                <div className="col-md-12 borderBottom" key={piece.id}>
-                    <div className="col-md-5">
-                        <img src={piece.photo} alt="artwork" ></img>
-                    </div>
-                    <div className="col-md-7">
+                <Grid.Row className="cartRowGrid" stackable columns={2} key={piece.id}>
+                    <Grid.Column className="checkoutImage">
+                        <img className="checkoutImag" src={piece.photo} alt="artwork" />
+                    </Grid.Column>
+                    <Grid.Column className="checkoutInfo">
                         <ul className="checkoutArt">
-                            <li><h6>{piece.title}</h6></li>
+                            <li><h4>{piece.title}</h4></li>
                             <li className="thinCombined">
-                                <p>{piece.size}</p>
-                                <p>{piece.medium}</p>
-                                <p>{piece.shipping}</p>
+                                <p className="cartDets">{piece.size} {piece.medium} {piece.shipping}</p>
                             </li>
                             <li className="artFooter quantityLine"> <span className="quantitySmall">QUANTITY:</span> <button onClick={(e) => {props.updateItem('remove', piece)}} className="removeButton" ><FontAwesomeIcon icon={faMinusCircle} /></button>{piece.quantity} <button onClick={(e) => {props.updateItem('add', piece)}} className="removeButton"><FontAwesomeIcon icon={faPlusCircle} /></button></li>
                             <li className="artFooter totalText"><span>TOTAL</span> ${piece.quantity * piece.price}</li>
                             <li></li>
                         </ul>
-                    </div>           
-                </div>
+                    </Grid.Column>
+                </Grid.Row>
             );
         }
 
-        return shoppingCart
+        return (<Grid className="cartGrid">{shoppingCart}</Grid>)
     
     }    
     render() {
         return (     
             <>
                 <Container className="checkoutContainer">
-
-
                 <Grid stackable columns={2}>
                     <Grid.Row>
                       <Grid.Column>

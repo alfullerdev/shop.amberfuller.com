@@ -6,3 +6,26 @@ div.item.logoPlacement img{
     height:100px!important;
     width:auto!important;
 }
+
+div.column.subNav {
+    border: 10px!important;
+
+}
+@media only screen and (max-width: 764px) {
+
+#aboutSubav{
+    margin-top:15px!important;
+    padding:0px!important;
+}
+
+#ctcSubav{
+    margin-top:10px!important;
+    padding:0px!important;
+}
+
+#chkSubav{
+    margin-top:10px!important;
+    padding:0px!important;
+}
+
+}
