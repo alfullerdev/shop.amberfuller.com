@@ -1,0 +1,8 @@
+.fixNav {
+    height:150px;
+}
+
+div.item.logoPlacement img{ 
+    height:100px!important;
+    width:auto!important;
+}
