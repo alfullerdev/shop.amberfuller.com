@@ -147,10 +147,7 @@ function completedPurchase(data){
 
 function sendSampleEmail (order) {
       
-
-      
       const today = new Date();
-
       var templateParams = {
           orderID: order.orderID,
           address: order.address,
@@ -165,9 +162,8 @@ function sendSampleEmail (order) {
           }
 
       emailjs.send("default_service","template_olvn1ol",templateParams).then((response) => {
-          
+        
           localStorage.clear();
-          
           console.log('SUCCESS!', response.status, response.text);
       }, (error) => {
           console.log('error',error.text);

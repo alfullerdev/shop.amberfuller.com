@@ -52,7 +52,11 @@ export class Checkout extends Component {
                             <li className="thinCombined">
                                 <p className="cartDets">{piece.size} {piece.medium} {piece.shipping}</p>
                             </li>
-                            <li className="artFooter quantityLine"> <span className="quantitySmall">QUANTITY:</span> <button onClick={(e) => {props.updateItem('remove', piece)}} className="removeButton" ><FontAwesomeIcon icon={faMinusCircle} /></button>{piece.quantity} <button onClick={(e) => {props.updateItem('add', piece)}} className="removeButton"><FontAwesomeIcon icon={faPlusCircle} /></button></li>
+                            <li className="artFooter quantityLine"> 
+                            <p className="quantitySmall">QUANTITY:</p> 
+                            <button onClick={(e) => {props.updateItem('remove', piece)}} className="removeButton" ><FontAwesomeIcon icon={faMinusCircle} /></button>
+                            
+                            {piece.quantity} <button onClick={(e) => {props.updateItem('add', piece)}} className="removeButton"><FontAwesomeIcon icon={faPlusCircle} /></button></li>
                             <li className="artFooter totalText"><span>TOTAL</span> ${piece.quantity * piece.price}</li>
                             <li></li>
                         </ul>
