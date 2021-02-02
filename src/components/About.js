@@ -8,7 +8,7 @@ export default function About() {
           <>
             <Container className="aboutContainer">
             
-                        <h4>About</h4>
+                        <h4>About Me</h4>
                         <p className="aboutText">
                         <p><Image className="aboutImage" src={Selfie} /></p>I grew up in Los Angeles, California being influenced by
                           the culture and eclectic environment around me. My work is
