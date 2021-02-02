@@ -160,10 +160,10 @@ function sendSampleEmail (order) {
           total:Number(JSON.parse(localStorage.getItem('total'))),
           date_ordered:today.toLocaleDateString()
           }
-
+        
       emailjs.send("default_service","template_olvn1ol",templateParams).then((response) => {
         
-          localStorage.clear();
+        clearCart();
           console.log('SUCCESS!', response.status, response.text);
       }, (error) => {
           console.log('error',error.text);
@@ -419,7 +419,7 @@ const listOfArt = [
       medium: null,
       framing: null,
       shipping: "Free Shipping",
-      price: '0.35',
+      price: '0.40',
       run: null,
       note: '100% Cotton',
   }]

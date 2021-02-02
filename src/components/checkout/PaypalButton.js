@@ -8,8 +8,6 @@ class PaypalButton extends React.Component {
   constructor(props) {
     super();
 
-    console.log('from button',props.totalPrice)
-
     this.state = {
       showButtons: false,
       loading: true,
