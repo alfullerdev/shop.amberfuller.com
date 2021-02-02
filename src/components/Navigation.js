@@ -5,9 +5,6 @@ import Logo from "../assets/shop_logo.png"
 import '../css/navigation.css'
 import '../css/art.css'
 
-import PageModal from '../modal/PageModal'
-
-
 export default function Navigation(props) {
 
     function showCart(){
