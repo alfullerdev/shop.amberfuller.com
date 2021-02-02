@@ -75,6 +75,13 @@ export default function App() {
     showArtToggle()
   }
 
+  function clearCartCheckout(){
+    setCart('')
+    setCount(0)
+    setTotal(0)
+    localStorage.clear();
+  }
+
   function updateCart(type, piece){
 
     if(type === 'remove') {
@@ -163,7 +170,7 @@ function sendSampleEmail (order) {
         
       emailjs.send("default_service","template_olvn1ol",templateParams).then((response) => {
         
-        clearCart();
+        clearCartCheckout();
           console.log('SUCCESS!', response.status, response.text);
       }, (error) => {
           console.log('error',error.text);
@@ -419,7 +426,7 @@ const listOfArt = [
       medium: null,
       framing: null,
       shipping: "Free Shipping",
-      price: '0.40',
+      price: '40',
       run: null,
       note: '100% Cotton',
   }]
