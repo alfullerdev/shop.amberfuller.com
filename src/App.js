@@ -11,6 +11,7 @@ import Checkout from './components/checkout/Checkout'
 import Conformation from './components/Conformation';
 
 import './css/style.css'
+import 'semantic-ui-css/semantic.min.css'
 
 import emailjs from 'emailjs-com';
 import{ init } from 'emailjs-com';

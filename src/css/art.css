@@ -350,11 +350,7 @@ body {
   text-align: left;
   margin-left: 0;
   padding: 0;
-  
   margin-top: 50px !important;
-}
-
-.ui.inverted.page {
 }
 
 .superArtContainer {
@@ -366,15 +362,19 @@ body {
 button.closeButton.noStyle {
   border: none;
   background-color: transparent !important;
-  margin: 0px !important;
+  margin: 0!important;
   padding: 0 !important;
   text-align: right !important;
+  z-index: 10000000000!important;
+  top:-20px;
 }
 
 
 
 div.closeButtonDiv {
-  text-align: right;
+  text-align: left;
+  padding:5px;
+  margin-top:-20px;
 }
 div.column.noButtonSpace{
   padding:0 !important;
@@ -382,6 +382,12 @@ div.column.noButtonSpace{
 }
 
 @media only screen and (max-width: 600px) {
+
+  h4.masterSize {
+    text-align: center;
+
+  }
+
   button.ui.button.noStyle {
     padding:0px!important;
   }
@@ -390,6 +396,7 @@ div.column.noButtonSpace{
     padding:0 !important;
     margin:0 !important;
   }
+  
 
   button.cartButton {
     margin:0px!important;
@@ -413,15 +420,19 @@ div.column.noButtonSpace{
   }
 
   div.column.artColArt {
+    width: 100%;
     padding: 0 !important;
     margin: 0 !important;
-    height: 300px;
+    padding-top: 20px!important;
+    height: 430px;
+    text-align: center!important;
   }
 
   div.column.artColArt img {
-    width: 400px;
-    top: -50px;
+    top:-30px;
   }
+
+  
 
   div.ui.inverted.page.modals.dimmer.transition.visible.active {
     padding: 0 !important;
@@ -443,6 +454,10 @@ div.column.noButtonSpace{
     margin-bottom: -50px!important;
     height: 90vh!important;
 
+  }
+
+  button.ui.button.noStyle.cartIcon{
+    display: none!important;
   }
 }
 
@@ -479,3 +494,4 @@ div.column.noButtonSpace{
   float: left;
 
 }
+

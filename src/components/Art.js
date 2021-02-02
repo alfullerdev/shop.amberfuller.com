@@ -54,7 +54,7 @@ export default function Art(props) {
               <Grid.Column className="artColArt">
                 <Image src={piece.photo[0]} />
               </Grid.Column>
-              <Grid.Column>
+              <Grid.Column className="artInformation">
                 <div>
                 <h4 className="masterSize">{piece.title}</h4>
                 </div>

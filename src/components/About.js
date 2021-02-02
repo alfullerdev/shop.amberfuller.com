@@ -1,16 +1,20 @@
 import React from 'react'
 import Selfie from "../assets/photo.jpeg"
-import { Image, Container} from 'semantic-ui-react'
+import { Image, Container, Grid} from 'semantic-ui-react'
 import '../css/art.css'
 
 export default function About() {
   return (
           <>
             <Container className="aboutContainer">
-            
-                        <h4>About Me xx</h4>
-                        <p className="aboutText">
-                        <p><Image className="aboutImage" src={Selfie} /></p>I grew up in Los Angeles, California being influenced by
+            <p><h4>About Me</h4></p>
+            <Grid stackable columns={2}>
+              <Grid.Column style={{width:"1vh"}}>
+              <Image src={Selfie} />
+              </Grid.Column>
+              <Grid.Column >
+              <p>
+                        I grew up in Los Angeles, California being influenced by
                           the culture and eclectic environment around me. My work is
                           my best way to interpret the ideas I have about myself and
                           the world I live in. I’m not a talker but I am a visual
@@ -28,6 +32,10 @@ export default function About() {
                           something I created, I feel I have succeeded in my
                           intentions.
                         </p>
+              </Grid.Column>
+            </Grid>
+                        
+  
           </Container>
           </>
           )
