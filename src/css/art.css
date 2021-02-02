@@ -247,11 +247,13 @@ button.ui.button.noStyle {
 }
 
 .quantityLine {
-  font-size: 15px !important;
+  margin-top:10px;
+  margin-bottom:10px;
+  font-size: 13px !important;
 }
 
 .quantityLine button {
-  font-size: 20px !important;
+  font-size: 15px !important;
 }
 
 .paymentOpts {
@@ -501,6 +503,13 @@ button.ui.button.noStyle {
 
 
 @media only screen and (max-width: 764px) {}
+
+div.aboutHeader{
+  text-align: center;
+  width: 100%!important;
+
+}
+
 
 div.column.selfieCol {
   width: 280px !important;

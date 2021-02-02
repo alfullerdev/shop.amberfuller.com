@@ -6,7 +6,7 @@ import '../css/art.css'
 export default function About() {
   return (<>
             <Container className="aboutContainer">
-            <p><h4>About Me</h4></p>
+            <div className="aboutHeader"><h4>About Me</h4></div>
             <Grid stackable columns={2}>
               <Grid.Column className="selfieCol" >
                 <img src={Selfie} className="selfieSm" />
