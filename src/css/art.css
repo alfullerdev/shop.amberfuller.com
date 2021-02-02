@@ -146,6 +146,11 @@ button.ui.button.noStyle {
 }
 
 @media only screen and (max-width: 600px) {
+
+  .masterSize {
+    padding-bottom: 10px;
+  }
+
   .halfWidth {
     width: 100%;
   }
@@ -178,6 +183,12 @@ button.ui.button.noStyle {
     padding-bottom: 20px;
     margin-bottom: 5px;
   }
+
+.thinInformation{
+  padding-top: 10px;
+  font-size: 11px;
+}
+
 }
 
 @media only screen and (min-width: 601px) {
@@ -421,15 +432,15 @@ div.column.noButtonSpace{
 
   div.column.artColArt {
     width: 100%;
+    height: 300px;
     padding: 0 !important;
     margin: 0 !important;
     padding-top: 20px!important;
-    height: 430px;
     text-align: center!important;
   }
 
   div.column.artColArt img {
-    top:-30px;
+    top:-35px;
   }
 
   
@@ -451,14 +462,58 @@ div.column.noButtonSpace{
   .aboutContainer {
     padding: 30px!important;
     padding-top: 190px!important;
-    margin-bottom: -50px!important;
-    height: 90vh!important;
+  }
+
+  .selfieSm{
+    text-align: center;
+    width: 50%;
+    padding:30px;
+
+  }
+  div.column.selfieCol{
+    width: 100%;
+    text-align: center!important;
 
   }
 
   button.ui.button.noStyle.cartIcon{
     display: none!important;
   }
+}
+
+button.ui.button.noStyle.blackButton{
+  background-color: #000!important;
+  color: white;
+}
+
+button.ui.button.noStyle{
+  border-radius: 0px;
+  padding: 5px!important;
+}
+
+button.ui.button.noStyle:hover{
+  
+}
+
+
+@media only screen and (max-width: 764px) {
+}
+
+div.column.selfieCol{
+  width: 280px!important;
+  text-align: center!important;
+
+}
+
+.selfieText{
+  text-align: justify;
+}
+
+
+.selfieSm{
+  text-align: center;
+  width: 100%;
+
 }
 
 .framing {
@@ -474,11 +529,10 @@ div.column.noButtonSpace{
 }
 
 .aboutContainer {
-  min-height:100vh;
   padding-top: 190px;
-  margin-bottom: -30px!important;
   width: 50%!important;
   display: block;
+  padding-bottom:100px;
 }
 
 .contactContainer {

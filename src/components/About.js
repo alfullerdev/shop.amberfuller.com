@@ -9,11 +9,11 @@ export default function About() {
             <Container className="aboutContainer">
             <p><h4>About Me</h4></p>
             <Grid stackable columns={2}>
-              <Grid.Column style={{width:"1vh"}}>
-              <Image src={Selfie} />
+              <Grid.Column className="selfieCol" >
+              <img src={Selfie} className="selfieSm" />
               </Grid.Column>
               <Grid.Column >
-              <p>
+              <p className="selfieText">
                         I grew up in Los Angeles, California being influenced by
                           the culture and eclectic environment around me. My work is
                           my best way to interpret the ideas I have about myself and

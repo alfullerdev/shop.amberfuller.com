@@ -70,16 +70,13 @@ export default function Art(props) {
                     {piece.shipping}
                 </div>
                 <div className="artInformation">
-                  {piece.run && (
-                    <div style={{ marginBottom: "10px" }} className="run">
-                      RUN OF: <b>{piece.run}</b>
-                    </div>
-                  )}
+
 
                   <div
                     className="thinInformation"
                     style={{ marginBottom: "10px" }}
                   >
+                    {piece.run && ( <span>RUN OF: <b>{piece.run}</b></span> )},
                     {piece.size}, {piece.description}, {piece.medium}
                   </div>
                   <div

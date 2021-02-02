@@ -18,6 +18,20 @@ export default function Navigation(props) {
         props.showArt()
     }
 
+    function getClass(){
+        //<button onClick={props.showCheck} className={getClass()}>checkout({props.count})</button>
+        return 
+    }
+
+    function checkoutButton(){
+
+        let css = "ui button noStyle"
+        if(props.count) {
+            css = "ui button noStyle blackButton"
+        }
+        return (<button onClick={props.showCheck} className={css}>checkout({props.count})</button>)
+    }
+
     return (
         <>
         <Menu borderless fluid widths={3} className="fixed fixNav" >
@@ -35,10 +49,9 @@ export default function Navigation(props) {
                         <button onClick={props.showContactFn} className="ui button noStyle">contact</button>
                     </Grid.Column>
                     <Grid.Column>
-                        <button onClick={props.showCheck} className="ui button noStyle">checkout</button>
+                        {checkoutButton()}
                     </Grid.Column>
-                    <Grid.Column><button onClick={props.showCheck} className="ui button noStyle cartIcon">
-                        <FontAwesomeIcon icon={faShoppingCart} />({props.count})</button>
+                    <Grid.Column>
                     </Grid.Column>
                 </Grid.Row>
             </Grid>
