@@ -77,7 +77,7 @@ export class Checkout extends Component {
                       <Grid.Column>
                       <div><h2>CHECKOUT</h2>  <button className="continue-shopping-btn" onClick={this.props.showArt}>CONTINUE SHOPPING</button><button className="continue-shopping-btn" onClick={this.props.clearCartAll}>CLEAR CART</button></div>
                       <div>{this.getSelectedItems(this.props)}</div>
-                      <div><p className="checkoutSubPrint">Framing not included, available upon request. Email support@amberfullerdesigner.com</p>  </div>
+                      <div><p className="checkoutSubPrint">Framing not included, available upon request. Email support@amberfullerdesigner.com. All prints come signed and numbered</p>  </div>
                       </Grid.Column>
                       <Grid.Column>
                         <div>
