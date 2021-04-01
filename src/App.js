@@ -27,6 +27,7 @@ import StacyAdams from "./assets/artwork/stacyabrams.png"
 import Pinkboxes from "./assets/artwork/pinkboxes.png"
 import Hat from "./assets/artwork/hat.png"
 import BlackPrint from "./assets/artwork/blackprint.png"
+import womanpurple from "./assets/artwork/womanpurple.png"
 
 export const ArtList = React.createContext();
 
@@ -309,9 +310,21 @@ function updatePiece (piece) {
   )
 }
 const listOfArt = [
-  
   {
-    id: '23352',
+    id: '23350',
+    title: 'Swaggù',
+    photo: [womanpurple],
+    selector:"womanpurple.jpg",
+    size: '18" x 24"',
+    description: 'Fine Art Print',
+    medium: 'Hahnemühle photo rag 100% Cotton, Fine, soft surface paper',
+    framing: "Framing not included, available upon request",
+    shipping: "Free Shipping, please allow 1-2 weeks of processing time before print is shipped out",
+    price: '150',
+    run: 12,
+    note: '2021',
+  },{
+    id: '23351',
     title: 'Freedom Fighters',
     selector:"ali.jpg",
     photo: [AliBasquiat],
@@ -323,8 +336,7 @@ const listOfArt = [
     price: '150',
     run: 100,
     note: 'Portraits of a [quarantined] mind, 2021',
-},
-  {
+  },{
       id: '23352',
       title: 'Dreamer',
       selector:"mlk.jpg",
