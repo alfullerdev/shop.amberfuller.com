@@ -28,6 +28,7 @@ import Pinkboxes from "./assets/artwork/pinkboxes.png"
 import Hat from "./assets/artwork/hat.png"
 import BlackPrint from "./assets/artwork/blackprint.png"
 import womanpurple from "./assets/artwork/womanpurple.png"
+import marvin from "./assets/artwork/marvin.png"
 
 export const ArtList = React.createContext();
 
@@ -310,6 +311,20 @@ function updatePiece (piece) {
   )
 }
 const listOfArt = [
+  {
+    id: '23349',
+    title: 'Where Did the Blue Skies Go?',
+    photo: [marvin],
+    selector:"marvin.jpg",
+    size: '18" x 24"',
+    description: 'Fine Art Print',
+    medium: 'Hahnemühle photo rag 100% Cotton, Fine, soft surface paper',
+    framing: "Framing not included, available upon request",
+    shipping: "Free Shipping, please allow 1-2 weeks of processing time before print is shipped out",
+    price: '150',
+    run: 5,
+    note: '2021',
+  },
   {
     id: '23350',
     title: 'Swaggù',
