@@ -13,8 +13,14 @@ export default function Art(props) {
   useEffect(() => {}, [piece]);
 
   function addToCart(piece) {
-    props.update(piece);
-    closeDisplay();
+    console.log(piece);
+    if(piece.id === '23349') {
+      alert('SOLD OUT');
+    } else {
+      props.update(piece);
+      closeDisplay();
+    }
+
   }
 
   function closeDisplay() {
@@ -55,6 +61,7 @@ export default function Art(props) {
                 <div>
                   <h4 className="masterSize">{piece.title}</h4>
                 </div>
+                
                 <button className="cartButton" onClick={() => addToCart(piece)}>
                   ADD TO CART
                 </button>
