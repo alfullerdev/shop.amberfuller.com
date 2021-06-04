@@ -25,7 +25,7 @@ import Traplin from "./assets/artwork/traplin.png"
 import Nas from "./assets/artwork/cautionkings.png"
 import StacyAdams from "./assets/artwork/stacyabrams.png"
 import Pinkboxes from "./assets/artwork/pinkboxes.png"
-import Hat from "./assets/artwork/hat.png"
+import Hat from "./assets/artwork/hat2.png"
 import BlackPrint from "./assets/artwork/blackprint.png"
 import womanpurple from "./assets/artwork/womanpurple.png"
 import marvin from "./assets/artwork/marvin.png"
@@ -461,11 +461,11 @@ const listOfArt = [
       note: '**Ships via mailing tube via USPS with 1-2 weeks',
   },{
       id: '23360',
-      selector:"hat.jpg",
-      title: 'The Donut Hat',
+      selector:"hat2.jpg",
+      title: 'The Donut Hat (version 2)',
       photo: [Hat],
       size: 'One Size (6 5/8" - 7 5/8")',
-      description: 'Embroidered Classic Dad Hat, Black',
+      description: 'Embroidered Classic Dad Hat, Tie-Dye',
       medium: null,
       framing: null,
       shipping: "Free Shipping",
