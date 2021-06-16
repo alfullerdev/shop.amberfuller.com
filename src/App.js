@@ -23,12 +23,12 @@ import Nefertiti from "./assets/artwork/nefertiti.png"
 import Kamala from "./assets/artwork/kamala.png"
 import Traplin from "./assets/artwork/traplin.png"
 import Nas from "./assets/artwork/cautionkings.png"
-import StacyAdams from "./assets/artwork/stacyabrams.png"
 import Pinkboxes from "./assets/artwork/pinkboxes.png"
 import Hat from "./assets/artwork/hat2.png"
-import BlackPrint from "./assets/artwork/blackprint.png"
 import womanpurple from "./assets/artwork/womanpurple.png"
-import marvin from "./assets/artwork/marvin.png"
+import menpower from "./assets/artwork/menpower.png"
+import womenpower from "./assets/artwork/womanpower.png"
+import blackfist from "./assets/artwork/blackfist.png"
 
 export const ArtList = React.createContext();
 
@@ -49,10 +49,12 @@ export default function App() {
   useEffect(() => {
 
     init("user_iUlwJ9fusu5N34Kup13LT")
-
     const storedTotal  = JSON.parse(localStorage.getItem('total'))
     const storedCount  = JSON.parse(localStorage.getItem('count'))
     const storedCart   = JSON.parse(localStorage.getItem('cart'))
+
+    const ReactPixel =  require('react-facebook-pixel');
+    ReactPixel.default.init('1008421503294555');
 
     if(storedCount) {
         setCount(storedCount);
@@ -311,6 +313,7 @@ function updatePiece (piece) {
   )
 }
 const listOfArt = [
+  /*
   {
     id: '23349',
     title: 'Where Did the Blue Skies Go?',
@@ -324,6 +327,46 @@ const listOfArt = [
     price: '150',
     run: 5,
     note: '2021',
+  },
+  */
+  {
+  id: '23361',
+  title: 'Always Mattered (Kiss the Ring)',
+  photo: [blackfist],
+  size: '13" x 19"',
+  description: 'Fine Art Print',
+  medium: 'Hahnemühle photo rag 100% Cotton, Fine, soft surface paper',
+  framing: "Framing not included, available upon request",
+  shipping: "Free Shipping, please allow 1-2 weeks of processing time before print is shipped out",
+  price: '100',
+  run: 12,
+  note: '2021',
+  },
+  {
+  id: '23362',
+  title: 'Panther vs. Panther (Power)',
+  photo: [menpower],
+  size: '13" x 19"',
+  description: 'Fine Art Print',
+  medium: 'Hahnemühle photo rag 100% Cotton, Fine, soft surface paper',
+  framing: "Framing not included, available upon request",
+  shipping: "Free Shipping, please allow 1-2 weeks of processing time before print is shipped out",
+  price: '150',
+  run: 12,
+  note: '2021',
+  },
+  {
+  id: '23363',
+  title: 'Power to the P',
+  photo: [womenpower],
+  size: '13 x 19"',
+  description: 'Fine Art Print',
+  medium: 'Hahnemühle photo rag 100% Cotton, Fine, soft surface paper',
+  framing: "Framing not included, available upon request",
+  shipping: "Free Shipping, please allow 1-2 weeks of processing time before print is shipped out",
+  price: '150',
+  run: 12,
+  note: '2021',
   },
   {
     id: '23350',
@@ -374,7 +417,7 @@ const listOfArt = [
       description: 'Giclee, Fine Art Print',
       medium: 'Hahnemühle William Turner, 100% Cotton',
       framing: "Framing not included, available upon request",
-      shipping: "Free Shipping, please allow 1-2 weeks of processing time before print is shipped out",
+      shipping: "Free Shipping,npm install --save react-facebook-pixel please allow 1-2 weeks of processing time before print is shipped out",
       price: '150',
       run: 100,
       note: '*each piece is uniquely hand-gilded with gold leaf. **Ships via mailing tube via USPS with 1-2 weeks',
@@ -419,7 +462,8 @@ const listOfArt = [
       price: '150',
       run: 100,
       note: '*each piece is uniquely hand-gilded with gold leaf. **Ships via mailing tube via USPS with 1-2 weeks',
-  },{
+  },
+  /*{
       id: '23357',
       title: 'Onna-bugeisha',
       selector:"abrams.jpg",
@@ -433,7 +477,9 @@ const listOfArt = [
       price: '150',
       run: 100,
       note: '*each piece is uniquely hand-gilded with gold leaf. **Ships via mailing tube via USPS with 1-2 weeks',
-  },{
+  },
+  */
+  {
       id: '23358',
       title: 'Pink Boxes',
       selector:"pinkboxes.jpg",
@@ -446,7 +492,9 @@ const listOfArt = [
       price: '120',
       run:8,
       note: 'each print is uniquely hand pulled by Amber and colors and alignment may vary from images shown',
-  }, {
+  }, 
+  /*
+  {
       id: '2335',
       title: 'ALL BLACK EVERYTHING',
       selector:"blackprint.jpg",
@@ -459,7 +507,9 @@ const listOfArt = [
       price: '250',
       run: 16,
       note: '**Ships via mailing tube via USPS with 1-2 weeks',
-  },{
+  },
+  */
+  {
       id: '23360',
       selector:"hat2.jpg",
       title: 'The Donut Hat (version 2)',
