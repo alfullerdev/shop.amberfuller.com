@@ -53,9 +53,6 @@ export default function App() {
     const storedCount  = JSON.parse(localStorage.getItem('count'))
     const storedCart   = JSON.parse(localStorage.getItem('cart'))
 
-    const ReactPixel =  require('react-facebook-pixel');
-    ReactPixel.default.init('1008421503294555');
-
     if(storedCount) {
         setCount(storedCount);
         setTotal(storedTotal);
