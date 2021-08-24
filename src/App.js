@@ -26,9 +26,9 @@ import Nas from "./assets/artwork/cautionkings.png"
 import Pinkboxes from "./assets/artwork/pinkboxes.png"
 import Hat from "./assets/artwork/hat2.png"
 import womanpurple from "./assets/artwork/womanpurple.png"
-import menpower from "./assets/artwork/menpower.png"
-import womenpower from "./assets/artwork/womanpower.png"
-import blackfist from "./assets/artwork/blackfist.png"
+import whitney from "./assets/artwork/whitney.png"
+import alicia from "./assets/artwork/alicia.png"
+import lauryn from "./assets/artwork/lauryn.png"
 
 export const ArtList = React.createContext();
 
@@ -310,29 +310,14 @@ function updatePiece (piece) {
   )
 }
 const listOfArt = [
-  /*
-  {
-    id: '23349',
-    title: 'Where Did the Blue Skies Go?',
-    photo: [marvin],
-    selector:"marvin.jpg",
-    size: '18" x 24"',
-    description: 'Fine Art Print',
-    medium: 'Hahnemühle photo rag 100% Cotton, Fine, soft surface paper',
-    framing: "Framing not included, available upon request",
-    shipping: "Free Shipping, please allow 1-2 weeks of processing time before print is shipped out",
-    price: '150',
-    run: 5,
-    note: '2021',
-  },
-  */
+/*
   {
   id: '23361',
   title: 'Always Mattered (Kiss the Ring)',
   photo: [blackfist],
   size: '13" x 19"',
   description: 'Fine Art Print',
-  medium: 'Hahnemühle photo rag 100% Cotton, Fine, soft surface paper',
+  medium: 'Hahnemühle William Turner 100% Cotton paper',
   framing: "Framing not included, available upon request",
   shipping: "Free Shipping, please allow 1-2 weeks of processing time before print is shipped out",
   price: '100',
@@ -345,7 +330,7 @@ const listOfArt = [
   photo: [menpower],
   size: '13" x 19"',
   description: 'Fine Art Print',
-  medium: 'Hahnemühle photo rag 100% Cotton, Fine, soft surface paper',
+  medium: 'Hahnemühle William Turner 100% Cotton paper',
   framing: "Framing not included, available upon request",
   shipping: "Free Shipping, please allow 1-2 weeks of processing time before print is shipped out",
   price: '150',
@@ -358,27 +343,72 @@ const listOfArt = [
   photo: [womenpower],
   size: '13 x 19"',
   description: 'Fine Art Print',
-  medium: 'Hahnemühle photo rag 100% Cotton, Fine, soft surface paper',
+  medium: 'Hahnemühle William Turner 100% Cotton paper',
   framing: "Framing not included, available upon request",
   shipping: "Free Shipping, please allow 1-2 weeks of processing time before print is shipped out",
   price: '150',
   run: 12,
   note: '2021',
   },
-  {
+  */
+
+{
+    id: '23364',
+    title: 'Fear no Fate',
+    photo: [whitney],
+    selector:"whitney.jpg",
+    size: '13" x 19"',
+    description: 'Fine Art Print',
+    medium: 'Hahnemühle William Turner 100% Cotton paper',
+    framing: "Framing not included, available upon request",
+    shipping: "Free Shipping. Print is shipped rolled. Please allow 1-2 weeks of processing time before print is shipped out",
+    price: '100',
+    run: '12',
+    note: '2021',
+},
+{
+    id: '23365',
+    title: 'Stormy Keys',
+    selector:"alicia.jpg",
+    photo: [alicia],
+    size: '13" x 19"',
+    description: 'Fine Art Print',
+    medium: 'Hahnemühle William Turner 100% Cotton paper',
+    framing: "Framing not included, available upon request",
+    shipping: "Free Shipping. Print is shipped rolled. Please allow 1-2 weeks of processing time before print is shipped out",
+    price: '100',
+    run: '12',
+    note: '2021',
+},
+{
+    id: '23366',
+    title: 'eARTh',
+    selector:"lauryn.jpg",
+    photo: [lauryn],
+    size: '18" x 24"',
+    description: 'Fine Art Print',
+    medium: 'Hahnemühle William Turner 100% Cotton paper',
+    framing: "Framing not included, available upon request",
+    shipping: "Free Shipping. Print is shipped rolled. Please allow 1-2 weeks of processing time before print is shipped out",
+    price: '150',
+    run: '12',
+    note: 'We are the eARTh, 2021',
+},
+{
     id: '23350',
     title: 'Swaggù',
     photo: [womanpurple],
-    selector:"womanpurple.jpg",
+    selector:"swagu.jpg",
     size: '18" x 24"',
     description: 'Fine Art Print',
-    medium: 'Hahnemühle photo rag 100% Cotton, Fine, soft surface paper',
+    medium: 'Hahnemühle William Turner 100% Cotton paper',
     framing: "Framing not included, available upon request",
-    shipping: "Free Shipping, please allow 1-2 weeks of processing time before print is shipped out",
+    shipping: "Free Shipping. Print is shipped rolled. Please allow 1-2 weeks of processing time before print is shipped out",
     price: '150',
     run: 12,
     note: '2021',
-  },{
+},
+{
     id: '23351',
     title: 'Freedom Fighters',
     selector:"ali.jpg",
@@ -387,11 +417,12 @@ const listOfArt = [
     description: 'Fine Art Print',
     medium: 'Hahnemühle William Turner, 100% Cotton',
     framing: "Framing not included, available upon request",
-    shipping: "Free Shipping, please allow 1-2 weeks of processing time before print is shipped out",
+    shipping: "Free Shipping. Print is shipped rolled. Please allow 1-2 weeks of processing time before print is shipped out",
     price: '150',
     run: 100,
     note: 'Portraits of a [quarantined] mind, 2021',
-  },{
+},
+{
       id: '23352',
       title: 'Dreamer',
       selector:"mlk.jpg",
@@ -400,11 +431,12 @@ const listOfArt = [
       description: 'Giclee, Fine Art Print',
       medium: 'Hahnemühle William Turner, 100% Cotton',
       framing: "Framing not included, available upon request",
-      shipping: "Free Shipping, please allow 1-2 weeks of processing time before print is shipped out",
+      shipping: "Free Shipping. Print is shipped rolled. Please allow 1-2 weeks of processing time before print is shipped out",
       price: '150',
       run: 100,
       note: '*each piece is uniquely hand-gilded with gold leaf. **Ships via mailing tube via USPS with 1-2 weeks',
-  },{
+},
+{
       id: '23353',
       title: 'Queen is King',
       selector:"nefertiti.jpg",
@@ -414,11 +446,12 @@ const listOfArt = [
       description: 'Giclee, Fine Art Print',
       medium: 'Hahnemühle William Turner, 100% Cotton',
       framing: "Framing not included, available upon request",
-      shipping: "Free Shipping,npm install --save react-facebook-pixel please allow 1-2 weeks of processing time before print is shipped out",
+      shipping: "Free Shipping. Print is shipped rolled. Please allow 1-2 weeks of processing time before print is shipped out",
       price: '150',
       run: 100,
       note: '*each piece is uniquely hand-gilded with gold leaf. **Ships via mailing tube via USPS with 1-2 weeks',
-  },{
+},
+{
       id: '23354',
       title: 'Charles Traplin',
       selector:"traplin.jpg",
@@ -427,11 +460,12 @@ const listOfArt = [
       description: 'Giclee, Fine Art Print',
       medium: 'Hahnemühle William Turner, 100% Cotton',
       framing: "Framing not included, available upon request",
-      shipping: "Free Shipping",
+      shipping: "Free Shipping. Print is shipped rolled. Please allow 1-2 weeks of processing time before print is shipped out",
       price: '150',
       run: 100,
       note: '*each piece is uniquely hand-gilded with gold leaf. **Ships via mailing tube via USPS with 1-2 weeks',
-  },{
+},
+{
       id: '23355',
       title: 'Babes Supporting Babes',
       selector:"kamala.jpg",
@@ -441,11 +475,12 @@ const listOfArt = [
       description: 'Giclee, Fine Art Print',
       medium: 'Hahnemühle William Turner, 100% Cotton',
       framing: "Framing not included, available upon request",
-      shipping: "Free Shipping",
+      shipping: "Free Shipping. Print is shipped rolled. Please allow 1-2 weeks of processing time before print is shipped out",
       price: '150',
       run: 100,
       note: '*each piece is uniquely hand-gilded with gold leaf. **Ships via mailing tube via USPS with 1-2 weeks',
-  },{
+},
+{
       id: '23356',
       title: 'Caution Kings',
       selector:"cautionkings.jpg",
@@ -455,11 +490,11 @@ const listOfArt = [
       description: 'Giclee, Fine Art Print',
       medium: 'Hahnemühle William Turner, 100% Cotton',
       framing: "Framing not included, available upon request",
-      shipping: "Free Shipping",
+      shipping: "Free Shipping. Print is shipped rolled. Please allow 1-2 weeks of processing time before print is shipped out",
       price: '150',
       run: 100,
       note: '*each piece is uniquely hand-gilded with gold leaf. **Ships via mailing tube via USPS with 1-2 weeks',
-  },
+},
   /*{
       id: '23357',
       title: 'Onna-bugeisha',
@@ -476,7 +511,7 @@ const listOfArt = [
       note: '*each piece is uniquely hand-gilded with gold leaf. **Ships via mailing tube via USPS with 1-2 weeks',
   },
   */
-  {
+{
       id: '23358',
       title: 'Pink Boxes',
       selector:"pinkboxes.jpg",
@@ -489,8 +524,8 @@ const listOfArt = [
       price: '120',
       run:8,
       note: 'each print is uniquely hand pulled by Amber and colors and alignment may vary from images shown',
-  }, 
-  /*
+}, 
+/*
   {
       id: '2335',
       title: 'ALL BLACK EVERYTHING',
@@ -505,8 +540,8 @@ const listOfArt = [
       run: 16,
       note: '**Ships via mailing tube via USPS with 1-2 weeks',
   },
-  */
-  {
+*/
+{
       id: '23360',
       selector:"hat2.jpg",
       title: 'The Donut Hat (version 2)',
@@ -519,4 +554,4 @@ const listOfArt = [
       price: '40',
       run: null,
       note: '100% Cotton',
-  }]
+}]
