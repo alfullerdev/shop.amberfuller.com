@@ -36,7 +36,7 @@ export default function App() {
 
   const [total, setTotal] = useState(0)
   const [count, setCount] = useState(0)
-  const [cart,  setCart]  = useState('')
+  const [cart,  setCart]  = useState([])
 
   const [showArt, setArt]                     = useState(true);
   const [showCheckout, setCheckout]           = useState(false);
@@ -179,16 +179,16 @@ function sendSampleEmail (order) {
       });
 }
 
-function updatePiece (piece) {
+function updatePiece (piece, size) {
+
     let modifiedCart = cart;
     if(!count) {
-      piece.quantity = 1;
-      setCart([piece])
-      setCount(1)
-      setTotal(Number(piece.price))
 
-  } else {
-      if (modifiedCart.find(item => item.id === piece.id) === undefined ) {
+          piece.quantity = 1;
+          modifiedCart = [piece];
+          setCart(prevState => modifiedCart)
+    } else {
+      if (modifiedCart.find(item => item.id === piece.id && item.size === piece.size ) === undefined ) {
           piece.quantity = 1;
           modifiedCart.push(piece)
           setCart(prevState => modifiedCart)
@@ -197,10 +197,10 @@ function updatePiece (piece) {
           modifiedCart[item].quantity = modifiedCart[item].quantity+1
           setCart(modifiedCart)
       }
-
+    
+    }
       setTotal(total+Number(piece.price))
       setCount(count+1)
-    }
   }
 
   function showFooterPage() {
@@ -352,7 +352,22 @@ const listOfArt = [
   },
   */
 
-{
+  {
+    id: '23352',
+    title: 'Dreamer',
+    selector:"mlk.jpg",
+    photo: [MLK],
+    size: ' 18" x 24"',
+    size_alt: ['8"x 10"', '11"x 14"', '18" x 24"'],
+    description: 'Giclee, Fine Art Print',
+    medium: 'Hahnemühle William Turner, 100% Cotton',
+    framing: "Framing not included, available upon request",
+    shipping: "Free Shipping. Print is shipped rolled. Please allow 1-2 weeks of processing time before print is shipped out",
+    price: '150',
+    price_alt: ['40', '80', '150'],
+    run: 100,
+    note: '*each piece is uniquely hand-gilded with gold leaf. **Ships via mailing tube via USPS with 1-2 weeks',
+}, {
     id: '23364',
     title: 'Fear no Fate',
     photo: [whitney],
@@ -421,20 +436,6 @@ const listOfArt = [
     price: '150',
     run: 100,
     note: 'Portraits of a [quarantined] mind, 2021',
-},
-{
-      id: '23352',
-      title: 'Dreamer',
-      selector:"mlk.jpg",
-      photo: [MLK],
-      size: ' 18" x 24"',
-      description: 'Giclee, Fine Art Print',
-      medium: 'Hahnemühle William Turner, 100% Cotton',
-      framing: "Framing not included, available upon request",
-      shipping: "Free Shipping. Print is shipped rolled. Please allow 1-2 weeks of processing time before print is shipped out",
-      price: '150',
-      run: 100,
-      note: '*each piece is uniquely hand-gilded with gold leaf. **Ships via mailing tube via USPS with 1-2 weeks',
 },
 {
       id: '23353',

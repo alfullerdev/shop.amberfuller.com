@@ -2,22 +2,47 @@ import React, { useState, useEffect } from "react";
 import { Image, Container, Grid } from "semantic-ui-react";
 import "../css/art.css";
 
+import { FaAngleDown } from "react-icons/fa";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimesCircle } from "@fortawesome/free-solid-svg-icons";
 
 export default function Art(props) {
   const [display, setdisplay] = useState(false);
-  const [artrow, setartrow] = useState(true);
-  const [piece, setpiece] = useState(0);
+  const [artrow, setartrow]   = useState(true);
+  const [displayPrice, setdisplayPrice]  = useState(0);
+  const [piece, setpiece]                = useState(0);
+  const [price, setPrice]                = useState(0);
+  const [size, setSize]                  = useState(0);
+  const priceDropDown                    = piece.price_alt;
+  const alternateSizes                   = piece.size_alt;
 
-  useEffect(() => {}, [piece]);
+  useEffect(() => {
+    let alternateSizes = piece.size_alt;
+    let priceUpdate = '$'+piece.price;
+    if(alternateSizes != undefined && piece != 0) {
+      priceUpdate = '$'+ priceDropDown[0];
+      setPrice(priceDropDown[0]);
+      setSize(alternateSizes[0]);
+    } else {
+      setSize(piece.size);
+      setPrice(piece.price);
+    }
+
+    setdisplayPrice(priceUpdate);    
+  }, [piece]);
+
+
 
   function addToCart(piece) {
-    console.log(piece);
     if(piece.id === '23349') {
       alert('SOLD OUT');
     } else {
-      props.update(piece);
+
+      let currentPiece = piece;
+      currentPiece.price = price;
+      currentPiece.size = size;
+      props.update(currentPiece);
       closeDisplay();
     }
 
@@ -34,6 +59,16 @@ export default function Art(props) {
     setartrow(false);
     setpiece(piece);
   }
+
+  function change(event) {
+    let currentSelection = event.target.value;
+    setPrice(priceDropDown[currentSelection]);
+    setSize(alternateSizes[currentSelection]);
+
+    let displayPrices = '$'+priceDropDown[currentSelection];
+    setdisplayPrice(displayPrices);
+  }
+
   return (
     <>
       {display && (
@@ -63,10 +98,23 @@ export default function Art(props) {
                 </div>
                 
                 <button className="cartButton" onClick={() => addToCart(piece)}>
-                  ADD TO CART
+                  ADD TO CART 
                 </button>
-                <div style={{ marginBottom: "20px" }} className="price">
-                  ${piece.price}
+                <div className="artInformation" >
+                Select Size 
+                </div>
+                <div style={{ marginBottom: "20px",}} className="price">
+                  
+                   {priceDropDown
+                      ? <select style={{float:'left', width:'80%'}} onChange={change.bind(this)} >{ piece.size_alt.map((price, index) => (<option key={index} value={index} > {price}</option>))} </select> : ''    
+                    }
+                    <div></div>
+                    <div style={{float:'left'}}><FaAngleDown/></div>
+                    <div style={{float:'clear'}}></div><br/>
+                    
+                </div>
+                <div style={{ marginBottom: "20px"}} className="price">
+                  {displayPrice}
                 </div>
                 <div style={{ marginTop: "10px" }} className="framing">
                   {piece.shipping}
